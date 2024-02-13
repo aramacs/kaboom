@@ -32,6 +32,6 @@ Após a instalação é necessário clonar o projeto <https://github.com/carloso
 
 Para acessar a aplicação ative o xampp e navegue até:
 
-<http://localhost>
+<http://localhost/kaboom>
 
 
