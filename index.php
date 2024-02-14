@@ -8,37 +8,47 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-TODO: fix Cadastre-se border 
-<div class=cadastro>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 offset-lg-4">
-      <div class="card">
+  <div class=cadastro>
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4">
+        <div class="card">
           <h3>Cadastre-se</h3>
-      </div>
-      <div class="card-body">
-      <form action="" method="POST">
-        <div>
-        <div class="mb-3">
-          <label>Usuario</label>
-            <input type="text" name="usuario" class="form-control">
+        </div>
+        <div class="card-body">
+        <form action="includes/signup.incl.php" method="post">
+          <div>
+          <div class="mb-3">
+            <label>Usuario</label>
+              <input type="text" name="uid" class="form-control" placeholder="Nome do Usuário">
+              </div>
+            </div>
+          <div>
+          <div class="mb-3">
+            <label>Email</label>
+              <input type="text" name="email" class="form-control" placeholder="Email">
+              </div>
+            </div>
+          <div>
+            <div class="mb-3">
+            <label>Senha</label>
+            <input type="password" name="pwd" class="form-control" placeholder="Digite sua Senha">
             </div>
           </div>
-        <div>
-          <div class="mb-3">
-          <label>Senha</label>
-          <input type="password" name="senha" class="form-control">
-          </div>
-          </div>
-        <div>
+          <div>
+            <div class="mb-3">
+            <label>Confirmar Senha</label>
+            <input type="password" name="pwdRepeat" class="form-control" placeholder="Confirme sua Senha">
+            </div>
+            </div>
+          <div>
             <div class="mb-3">
               <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
+</body>
 </html>
