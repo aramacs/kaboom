@@ -4,10 +4,13 @@
 switch ($_REQUEST["acao"]) {
     case 'cadastrar':
         $nome = $_POST["nome"];
-        $email = $_POST["email"];
-        $senha = $_POST["senha"];
+        $data_nascimento = $_POST["dt_nascimento"];
+        $cpf = $_POST["cpf"];
+        $rg = $_POST["rg"];
+        $telefone = $_POST["telefone"];
 
-        $sql = "INSERT INTO users (nome, email, senha) VALUES ('{$nome}', '{$email}', '{$senha}')";
+
+        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('{$nome}', '{$email}', '{$senha}')";
 
         $resultado = $conn->query($sql);
         break;
