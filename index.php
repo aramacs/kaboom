@@ -35,19 +35,20 @@
   <div class="row">
     <div class=col mt-5>
       <?php
-        switch (@$_REQUEST['page']) {
-            case 'novo':
-                include 'usuario.php';
-                break;
+        include("config.php");
+      switch (@$_REQUEST['page']) {
+          case 'novo':
+              include 'usuario.php';
+              break;
 
-            case 'listar':
-                include 'listar.php';
-                break;
+          case 'listar':
+              include 'listar.php';
+              break;
 
-            default:
-                print '<h1>Seja Bem-Vindo(a)</h1>';
-                break;
-        }
+          default:
+              print '<h1>Seja Bem-Vindo(a)</h1>';
+              break;
+      }
       ?>
     </div>
   </div>
