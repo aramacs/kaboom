@@ -5,8 +5,9 @@ define('USER', 'root');
 define('PASS', '');
 define('BASE', 'kaboomdb');
 
-$conn = new mysqli(HOST, USER, PASS, BASE);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
