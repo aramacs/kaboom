@@ -50,13 +50,13 @@
           <div>
             <div class="mb-3">
             <label>Telefone</label>
-            <input type="text" name="telefone" class=form-control" placeholder="Digite seu RG">
+            <input type="text" name="telefone" class=form-control" placeholder="Digite seu telefone">
             </div>
           </div>
           <div>
             <div class="mb-3">
             <label>endereco</label>
-            <input type="text" name="endereco_id" class=form-control" placeholder="Digite seu endereco">
+            <input type="text" name="endereco_id" class=form-control" placeholder="Digite seu RG">
             </div>
           </div>
           <div>
