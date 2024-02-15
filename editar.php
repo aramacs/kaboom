@@ -1,7 +1,8 @@
 <h1>Editar Usuario</h1>
 <?php
-
-    $sql = "SELECT * FROM usuarios WHERE id =".$_REQUEST["id"];
+include 'config.php';
+//require 'config.php';
+$sql = "SELECT * FROM usuarios WHERE id =".$_REQUEST["id"];
 $resultado = $conn->query($sql);
 $row = $resultado->fetch_object();
 ?>

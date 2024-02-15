@@ -30,6 +30,28 @@ Após a instalação é necessário clonar o projeto <https://github.com/carloso
  - Windows 
     `C:\Xampp\htdocs`
 
+##### Instrução para recriar db
+
+'
+CREATE DATABASE kaboomdb; 
+CREATE TABLE enderecos (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  rua VARCHAR(100) NOT NULL,
+  numero VARCHAR(10) NOT NULL,
+  cidade VARCHAR(100) NOT NULL,
+  cep VARCHAR(8) NOT NULL
+);
+
+CREATE TABLE usuarios (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  data_nascimento DATE NOT NULL,
+  cpf VARCHAR(11) NOT NULL,
+  rg VARCHAR(20) NOT NULL,
+  telefone VARCHAR(20) NOT NULL,
+  endereco_id INT,
+  FOREIGN KEY (endereco_id) REFERENCES enderecos(id)
+);'
 Para acessar a aplicação ative o xampp e navegue até:
 
 <http://localhost/kaboom>
