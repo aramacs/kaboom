@@ -15,13 +15,20 @@ if ($qtd > 0) {
     echo "<th>Nome</th>";
     echo "<th>E-mail</th>";
     echo "<th>Endereço</th>";
+    echo "<th>Acoes</th>";
     echo "</tr>";
     while ($row = $res->fetch_object()) {
         echo "<tr>";
         echo "<td>" . $row->id . "</td>";
         echo "<td>" . $row->nome . "</td>";
-        echo "<td>" . $row->email . "</td>";
+        echo "<td>" . $row->data_nascimento . "</td>";
+        echo "<td>" . $row->cpf . "</td>";
+        echo "<td>" . $row->rg . "</td>";
         echo "<td>" . $row->endereco . "</td>";
+        echo "<td>
+                <button onclick=\"location.href='?page=editar&id=" . $row->id . "'\" class='btn btn-success'>Editar</button>
+                <button class='btn btn-danger'>Excluir</button>
+                </td>";
         echo "</tr>";
     }
     echo "</table>";
